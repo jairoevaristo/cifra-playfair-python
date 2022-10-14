@@ -21,8 +21,6 @@ def verifica(a,b):
         for l in range(5):
             if ord(a[k][l]) == ord(b):
                 c = True
-            #else:
-                #print(a[k][l], " != ", b)
     return c
 
 def posicion(a,b):
@@ -72,13 +70,12 @@ def construir_matriz(deixar,Chave):
     return deixar
 
 if Opcao==1:
-    #Solicitar Dados
     Texto = input("Por favor, digite o texto para cifrar: ")
     Chave = input("Por favor insira a chave: ")
-    #Texto = "universidade federal de mt";
+    
     Texto = Texto.upper().strip().replace(" ", "")
     Texto = Texto.replace("J", "I")
-    #Chave = "wanderson";
+    
     Chave = Chave.upper().strip().replace(" ", "")
     Chave = Chave.replace("J", "I")
 
@@ -103,10 +100,9 @@ if Opcao==1:
                     cont-=1
 
 
-    #Posições da primeira letra
     X1=0
     X2=0
-    #Posições da segunda letra
+    
     Y1=0
     Y2=0
 
@@ -119,20 +115,17 @@ if Opcao==1:
                 Y1 = posicion(deixar,pares[i][j])[0]
                 Y2 = posicion(deixar,pares[i][j])[1]
             
-            #Caso 1
             X1 = int(X1)
             Y1 = int(Y1)
             X2 = int(X2)
             Y2 = int(Y2)
-
-            #Caso 1
+            
             W1=X1
             W2=Y2
 
             Z1=Y1
             Z2=X2
             
-            #Caso 2
             if X2 == Y2:
                 W2=X2
                 Z2=Y2
@@ -143,7 +136,6 @@ if Opcao==1:
                 if Z1==5:
                     Z1=0
 
-            # Caso 3
             if X1 == Y1:
                 W1 = X1
                 Z1 = Y1
@@ -163,15 +155,11 @@ if Opcao==1:
             print(cifrado[i][j].decode(), end='')
     
 if Opcao==2 :
-    #Descifrar
-    # Solicitar Dados
     Texto = input("Por favor, digite o texto para decifrar: ")
     Chave = input("Por favor insira a chave: ")
-    #Texto = "X W G Y W C B G E N E W K W E W S W Q W A T P Z Y Y";
+    
     Texto = Texto.upper().strip().replace(" ", "")
-    #print(Texto)
-    #Texto = Texto.replace("J", "I");
-    #Chave = "wanderson";
+   
     Chave = Chave.upper().strip().replace(" ", "")
     Chave = Chave.replace("J", "I")
 
@@ -196,10 +184,9 @@ if Opcao==2 :
                     cont-=1
 
 
-    #Posições da primeira letra
     W1=0
     W2=0
-    #Posições da segunda letra
+   
     Z1=0
     Z2=0
 
@@ -211,20 +198,19 @@ if Opcao==2 :
             else:
                 Z1 = posicion(deixar,pares[i][j])[0]
                 Z2 = posicion(deixar,pares[i][j])[1]
-            #Caso 1
+       
             W1 = int(W1)
             Z1 = int(Z1)
             W2 = int(W2)
             Z2 = int(Z2)
 
-            #Caso 1
+            
             X1=W1
             X2=Z2
 
             Y1=Z1
             Y2=W2
             
-            #Caso 2
             if W2 == Z2:
                 X2=W2
                 Y2=Z2
@@ -239,7 +225,6 @@ if Opcao==2 :
                 if Y1 == -1:
                     Y1 = 4
 
-            # Caso 3
             if W1 == Z1:
                 X1 = W1
                 Y1 = Z1

@@ -32,10 +32,10 @@ def posicion(a,b):
     return pos
 def construir_matriz(deixar,Chave):
     Alfabeto = "ABCDEFGHIKLMNOPQRSTUVWXYZ"
-    # Gerar Matriz
+    
     cont = 0
     cont2 = 0
-    #print("A chave eh: ", Chave)
+   
     for i in range(5):
         for j in range(5):
             while True:
